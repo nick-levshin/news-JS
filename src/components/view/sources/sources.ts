@@ -10,13 +10,13 @@ class Sources implements ISources {
         data.forEach((item) => {
             const sourceClone = sourceItemTemp.content.cloneNode(true) as Element;
 
-            sourceClone.querySelector('.source__item-name').textContent = item.name;
-            sourceClone.querySelector('.source__item').setAttribute('data-source-id', item.id);
+            (sourceClone.querySelector('.source__item-name') as Element).textContent = item.name;
+            (sourceClone.querySelector('.source__item') as Element).setAttribute('data-source-id', item.id);
 
             fragment.append(sourceClone);
         });
 
-        document.querySelector('.sources').append(fragment);
+        (document.querySelector('.sources') as Element).append(fragment);
     }
 }
 

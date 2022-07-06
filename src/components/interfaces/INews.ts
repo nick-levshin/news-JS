@@ -1,5 +1,5 @@
-import { IArticle } from '../types/types';
+import { Article } from '../types/types';
 
 export default interface INews {
-    draw(data: IArticle[]): void;
+    draw(data: Article[]): void;
 }

@@ -1,5 +1,5 @@
-import { ISource } from '../types/types';
+import { Source } from '../types/types';
 
 export default interface ISources {
-    draw(data: ISource[]): void;
+    draw(data: Source[]): void;
 }
