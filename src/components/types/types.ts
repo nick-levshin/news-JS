@@ -1,10 +1,10 @@
 export type SourceRes = {
-    sources: ISource[];
+    sources: Source[];
     status: 'ok' | 'error';
 };
 
 export type NewsRes = {
-    articles: IArticle[];
+    articles: Article[];
     status: 'ok' | 'error';
     totalResults: number;
 };
@@ -13,7 +13,7 @@ export type Options<T> = {
     [key: string]: T;
 };
 
-export type ISource = {
+export type Source = {
     id: string;
     name: string;
     description: string;
@@ -23,12 +23,12 @@ export type ISource = {
     language: string;
 };
 
-export type IArticle = {
+export type Article = {
     author: string;
     content: string;
     description: string;
     publishedAt: string;
-    source: ISource;
+    source: Source;
     title: string;
     url: string;
     urlToImage: string;
