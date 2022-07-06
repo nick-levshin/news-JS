@@ -1,9 +1,7 @@
-import INewsData from '../interfaces/INewsData';
-import ISourceData from '../interfaces/ISourceData';
 import AppLoader from './appLoader';
 
 class AppController extends AppLoader {
-    getSources(callback: (data: ISourceData) => ISourceData) {
+    getSources(callback: () => void): void {
         super.getResp(
             {
                 endpoint: 'sources',
@@ -12,7 +10,7 @@ class AppController extends AppLoader {
         );
     }
 
-    getNews(e: Event, callback: (data: INewsData) => INewsData) {
+    getNews(e: Event, callback: () => void): void {
         let target = e.target as Element;
         const newsContainer = e.currentTarget as Element;
 
@@ -33,7 +31,7 @@ class AppController extends AppLoader {
                 }
                 return;
             }
-            target = target.parentNode;
+            target = target.parentNode as Element;
         }
     }
 }
