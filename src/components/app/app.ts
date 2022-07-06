@@ -1,8 +1,9 @@
 import AppController from '../controller/controller';
+import IApp from '../interfaces/IApp';
 import { NewsRes, SourceRes } from '../types/types';
 import { AppView } from '../view/appView';
 
-class App {
+class App implements IApp {
     _controller: AppController;
     _view: AppView;
 
@@ -11,7 +12,7 @@ class App {
         this._view = new AppView();
     }
 
-    start() {
+    start(): void {
         document
             .querySelector('.sources')
             ?.addEventListener('click', (e) =>

@@ -1,7 +1,8 @@
+import IAppController from '../interfaces/IAppController';
 import { NewsRes, SourceRes } from '../types/types';
 import AppLoader from './appLoader';
 
-class AppController extends AppLoader {
+class AppController extends AppLoader implements IAppController {
     getSources(callback: (data?: SourceRes) => void): void {
         super.getResp(
             {
@@ -11,7 +12,7 @@ class AppController extends AppLoader {
         );
     }
 
-    getNews(e: Event, callback: (data?: NewsRes) => void) {
+    getNews(e: Event, callback: (data?: NewsRes) => void): void {
         let target = e.target as Element;
         const newsContainer = e.currentTarget as Element;
 
