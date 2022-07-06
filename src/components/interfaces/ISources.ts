@@ -1,5 +1,5 @@
-import ISource from './ISource';
+import { ISource } from '../types/types';
 
-export default interface INews {
+export default interface ISources {
     draw(data: ISource[]): void;
 }
