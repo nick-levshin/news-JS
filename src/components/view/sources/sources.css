@@ -1,20 +1,34 @@
+.swiper {
+    width: 80vw;
+}
+
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev {
+    padding-top: 2em;
+}
+
+.swiper .swiper-button-next {
+    right: 40%;
+}
+
+.swiper .swiper-button-prev {
+    left: 40%;
+}
+
 .sources {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    height: 120px;
-    overflow: auto;
-    align-items: center;
     font: 300 1em 'Fira Sans', sans-serif;
+    padding-top: 0.25em;
+    padding-bottom: 3em;
 }
 
 .source__item {
+    box-sizing: border-box;
+    text-align: center;
     background: none;
     border: 2px solid #30c5ff;
     font: inherit;
     line-height: 1;
-    margin: 0.5em;
-    padding: 1em 2em;
+    padding: 1em;
     color: #70d6ff;
     transition: 0.25s;
     cursor: pointer;
@@ -31,4 +45,7 @@
 .source__item-name {
     font-weight: 400;
     white-space: nowrap;
+}
+
+@media screen and (max-width: 900px) {
 }

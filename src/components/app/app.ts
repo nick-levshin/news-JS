@@ -4,8 +4,8 @@ import { NewsRes, SourceRes } from '../types/types';
 import { AppView } from '../view/appView';
 
 class App implements IApp {
-    _controller: AppController;
-    _view: AppView;
+    private _controller: AppController;
+    private _view: AppView;
 
     constructor() {
         this._controller = new AppController();
