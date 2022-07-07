@@ -17,6 +17,7 @@ class Sources implements ISources {
         });
 
         (document.querySelector('.sources') as Element).append(fragment);
+        (document.querySelector('.source__item') as HTMLElement).click();
     }
 }
 

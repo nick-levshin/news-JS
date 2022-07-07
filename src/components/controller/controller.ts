@@ -17,10 +17,10 @@ class AppController extends AppLoader implements IAppController {
         const newsContainer = e.currentTarget as Element;
 
         while (target !== newsContainer) {
-            if (target.classList.contains('source__item')) {
-                const sourceId = target.getAttribute('data-source-id') as string;
-                if (newsContainer.getAttribute('data-source') !== sourceId) {
-                    newsContainer.setAttribute('data-source', sourceId);
+            if ((target as Element).classList.contains('source__item')) {
+                const sourceId = (target as Element).getAttribute('data-source-id') as string;
+                if ((newsContainer as Element).getAttribute('data-source') !== sourceId) {
+                    (newsContainer as Element).setAttribute('data-source', sourceId);
                     super.getResp(
                         {
                             endpoint: 'everything',
@@ -33,7 +33,7 @@ class AppController extends AppLoader implements IAppController {
                 }
                 return;
             }
-            target = target.parentNode as Element;
+            target = (target as Element).parentNode as Element;
         }
     }
 }
